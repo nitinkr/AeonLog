@@ -2,7 +2,12 @@ use std::process;
 use clap::{Parser, Subcommand};
 
 #[derive(Parser, Debug)]
-#[command(version)]
+#[command(
+    name = env!("CARGO_PKG_NAME"),
+    version = env!("CARGO_PKG_VERSION"),
+    author = env!("CARGO_PKG_AUTHORS"),
+    about = env!("CARGO_PKG_DESCRIPTION"),
+)]
 struct Cli {
     #[command(subcommand)]
     command: Commands,
