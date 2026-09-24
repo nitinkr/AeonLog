@@ -1,12 +1,12 @@
 use assert_cmd::prelude::*;
-use logos::KvStore;
+use aeonlog::KvStore;
 use predicates::str::contains;
 use std::process::Command;
 
 // `kvs` with no args should exit with a non-zero code.
 #[test]
 fn cli_no_args() {
-    Command::cargo_bin("kvs").unwrap().assert().failure();
+    Command::cargo_bin("aeonlog").unwrap().assert().failure();
 }
 
 // `kvs -V` should print the version

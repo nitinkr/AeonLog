@@ -1,5 +1,5 @@
 [package]
-name = "logos"
+name = "aeonlog"
 version = "0.1.0"
 author  = ["nitin kumar"]
 discription = "A rust bitcask impl. A KV store."
